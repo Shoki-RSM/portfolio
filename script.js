@@ -35,21 +35,23 @@
     });
   }
 
+  // ----- Copy buttons (e.g. the email address) -----
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy');
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy');
+    function done(label) {
+      btn.textContent = label;
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { done('Select to copy'); });
+    } else {
+      done('Select to copy');
+    }
+  });
+
   // ----- Footer year -----
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
-
-  // ----- Reveal sections as they scroll into view -----
-  if ('IntersectionObserver' in window) {
-    var items = document.querySelectorAll('.section-title, .project, .skill-card, .timeline li, .about-grid, .contact-card');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -8% 0px' });
-    items.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  }
 })();
