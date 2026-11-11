@@ -444,3 +444,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   background: var(--accent-soft); color: var(--accent); border: 1px solid transparent;
 }
 .copy:hover { border-color: var(--accent); }
+
+/* Long name in the header: shrink slightly on small phones */
+@media (max-width: 380px) { .brand { font-size: 1rem; } }
+.hero h1 .grad { display: inline-block; font-size: .62em; line-height: 1.2; margin-top: .35em; }

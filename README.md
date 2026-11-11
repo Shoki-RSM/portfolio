@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio website for **Shoki** ([@Shoki-RSM](https://github.com/Shoki-RSM)), an aspiring software developer and second-year BSc Computing student at UNISA.
+Personal portfolio website for **Reshoketswe (Shoki) Makhura** ([@Shoki-RSM](https://github.com/Shoki-RSM)), an aspiring software developer and second-year BSc Computing student at UNISA.
 
 Plain HTML, CSS and JavaScript with no framework and no build step.
 
