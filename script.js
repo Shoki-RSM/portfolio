@@ -35,6 +35,28 @@
     });
   }
 
+  // ----- Copy buttons (the email address) -----
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy');
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy');
+    function show(label) {
+      btn.textContent = label;
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+    }
+    function selectEmail() {
+      var el = document.querySelector('.email');
+      if (!el || !window.getSelection) return;
+      var r = document.createRange(); r.selectNodeContents(el);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { show('Copied'); }, function () { selectEmail(); show('Press Ctrl+C'); });
+    } else {
+      selectEmail(); show('Press Ctrl+C');
+    }
+  });
+
   // ----- Footer year -----
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
