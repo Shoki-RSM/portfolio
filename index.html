@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Shoki · Software Developer</title>
   <meta name="description" content="Portfolio of Shoki, an aspiring software developer and second-year BSc Computing student at UNISA.">
+  <meta name="theme-color" content="#0f172a">
   <meta property="og:title" content="Shoki · Software Developer">
   <meta property="og:description" content="Aspiring software developer, BSc Computing (2nd year) at UNISA.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/thutovest-landing.webp">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script>
     // Apply the saved theme before first paint so the page doesn't flash.
@@ -26,17 +25,16 @@
 
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Shoki, home">
-        <span class="brand-mark" aria-hidden="true">S</span>
-        <span>Shoki</span>
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span> Shoki
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
       <ul id="nav-links" class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#toolkit">Toolkit</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -51,171 +49,202 @@
 
   <main id="main">
     <!-- HERO -->
-    <section id="top" class="hero wrap">
-      <div class="hero-text">
-        <p class="label">Software developer · BSc Computing student</p>
-        <h1>I build software that solves <em>real</em> problems.</h1>
-        <p class="lede">
-          I'm a second-year BSc Computing student at the University of South Africa (UNISA).
-          I like taking a messy, real-world problem and turning it into a clear, reliable app,
-          from the database up to the screen.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#work">See my work</a>
-          <a class="btn ghost" href="https://github.com/Shoki-RSM" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true" class="gh"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
-            GitHub
-          </a>
+    <section id="top" class="hero-band">
+      <div class="hero wrap">
+        <div class="hero-text">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Open to internships &amp; vacation work</p>
+          <h1>Hi, I'm Shoki.<br><span class="grad">I build software that solves real problems.</span></h1>
+          <p class="lede">
+            Aspiring software developer and second-year <strong>BSc Computing</strong> student at the
+            <strong>University of South Africa (UNISA)</strong>. I like turning messy, real-world problems
+            into clear, reliable apps, from the database up to the screen.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">See my work</a>
+            <a class="btn ghost" href="https://github.com/Shoki-RSM" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="gh"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+              GitHub
+            </a>
+          </div>
         </div>
+
+        <!-- An editor window that introduces Shoki as code -->
+        <figure class="editor" aria-label="About Shoki, written as a TypeScript object">
+          <div class="editor-bar" aria-hidden="true">
+            <span class="lights"><i></i><i></i><i></i></span>
+            <span class="editor-tab">shoki.ts</span>
+          </div>
+          <pre class="editor-code"><code><span class="ln">1</span><span class="k">const</span> <span class="v">shoki</span> = {
+<span class="ln">2</span>  <span class="p">role</span>: <span class="s">"Aspiring software developer"</span>,
+<span class="ln">3</span>  <span class="p">studying</span>: <span class="s">"BSc Computing @ UNISA"</span>,
+<span class="ln">4</span>  <span class="p">year</span>: <span class="n">2</span>,
+<span class="ln">5</span>  <span class="p">building</span>: [<span class="s">"ThutoVest"</span>, <span class="s">"Thengesa"</span>],
+<span class="ln">6</span>  <span class="p">stack</span>: [<span class="s">"TypeScript"</span>, <span class="s">"React"</span>, <span class="s">"Supabase"</span>],
+<span class="ln">7</span>  <span class="p">openTo</span>: <span class="s">"internships"</span>,
+<span class="ln">8</span>};
+<span class="ln">9</span>
+<span class="ln">10</span><span class="c">// Let's build something.</span><span class="caret" aria-hidden="true"></span></code></pre>
+        </figure>
       </div>
 
-      <aside class="profile" aria-label="Profile">
-        <!-- To use a photo: add photo.jpg to the repo and replace the div below with
-             <img class="avatar" src="photo.jpg" alt="Shoki" width="96" height="96"> -->
-        <div class="avatar" aria-hidden="true">S</div>
-        <div class="profile-id">
-          <p class="profile-name">Shoki</p>
-          <p class="profile-role">Aspiring software developer</p>
-        </div>
-        <dl class="profile-facts">
-          <div><dt>Studying</dt><dd>BSc Computing, UNISA</dd></div>
-          <div><dt>Year</dt><dd>Second year</dd></div>
-          <div><dt>Based in</dt><dd>South Africa</dd></div>
-          <div><dt>Status</dt><dd><span class="status"><span class="dot" aria-hidden="true"></span>Open to internships</span></dd></div>
+      <div class="wrap">
+        <dl class="stats" aria-label="Highlights">
+          <div><dt>Year of study</dt><dd>2nd</dd></div>
+          <div><dt>Projects on the go</dt><dd>2</dd></div>
+          <div><dt>Tests &amp; attack probes on ThutoVest</dt><dd>137</dd></div>
         </dl>
-      </aside>
+      </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section wrap">
-      <div class="section-head">
-        <p class="label">About</p>
-        <h2>Self-driven, and learning by building</h2>
-      </div>
+      <h2 class="section-title"><span>01</span> About me</h2>
       <div class="about-grid">
         <div class="prose">
           <p>
-            At UNISA I'm building a solid base in programming, data structures, algorithms,
-            databases and the maths behind computing. Distance learning has made me self-driven:
-            I plan my own time, find my own resources and finish what I start.
+            I'm studying towards a BSc in Computing at UNISA, where I'm building a solid base in
+            programming, data structures, algorithms, databases and the maths behind computing.
+            Studying through distance learning has taught me to be self-driven: I plan my own
+            time, find my own resources and finish what I start.
           </p>
           <p>
-            Outside the syllabus I learn by building. With <strong>Team Thuto</strong> I helped build
-            <strong>ThutoVest</strong> for the FNB App of the Year Hackathon 2026. It's a full-stack
-            app that takes South African matriculants from "I want to study" to "I can graduate".
+            Outside the syllabus I learn by building. I was part of <strong>Team Thuto</strong>,
+            which built <strong>ThutoVest</strong> for the FNB App of the Year Hackathon 2026,
+            and I'm now collaborating on <strong>Thengesa</strong>, a business assistant for spaza shops.
           </p>
           <p>
-            Next, I want to learn from experienced developers through internships, vacation work
-            and open-source contributions.
+            I'm looking for opportunities to learn from experienced developers: internships,
+            vacation work, open-source contributions and other student projects.
           </p>
         </div>
-        <ul class="now" aria-label="Right now">
-          <li><span class="label">Studying</span><p>Second-year BSc Computing modules at UNISA</p></li>
-          <li><span class="label">Building</span><p>Thengesa, a new project I'm collaborating on</p></li>
-          <li><span class="label">Looking for</span><p>Internships, vacation work and student projects</p></li>
+        <ul class="facts" aria-label="Quick facts">
+          <li><span>Based in</span> South Africa</li>
+          <li><span>Studying</span> BSc Computing, UNISA</li>
+          <li><span>Year</span> Second year</li>
+          <li><span>Interests</span> Full-stack web, data, problem solving</li>
+          <li><span>Looking for</span> Internships &amp; vacation work</li>
         </ul>
       </div>
     </section>
 
-    <!-- WORK -->
-    <section id="work" class="section wrap">
-      <div class="section-head">
-        <p class="label">Selected work</p>
-        <h2>Projects</h2>
-      </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section wrap">
+      <h2 class="section-title"><span>02</span> Projects</h2>
 
-      <article class="featured">
-        <div class="featured-intro">
-          <p class="label accent">Team project · FNB App of the Year Hackathon 2026</p>
+      <article class="project featured">
+        <div class="project-head">
+          <p class="tag">Featured · Team project · Hackathon 2026</p>
           <h3>ThutoVest</h3>
-          <p class="featured-sub">From "I want to study" to "I can graduate."</p>
+          <p class="project-sub">From "I want to study" to "I can graduate."</p>
           <p>
-            Built by a team of three for the <em>Access to Higher Education</em> challenge.
-            ThutoVest builds a matriculant a personal plan from course choice to first year.
-            It warns them before a deadline, document or funding gap becomes a problem, and
-            connects them with verified sponsors who pay the institution directly. Students low
-            on data can follow along on WhatsApp.
+            Built by a team of three for the <strong>FNB App of the Year Hackathon 2026</strong>
+            (challenge: <em>Access to Higher Education</em>). ThutoVest walks a matriculant from
+            choosing a course to starting first year and connects them with
+            <strong>verified sponsors who pay the institution directly</strong>.
           </p>
+          <ul class="bullets">
+            <li><strong>Server-enforced rules:</strong> the browser is never trusted. Every action is checked by a Supabase Edge Function and Postgres row-level security.</li>
+            <li><strong>Fair funding:</strong> bursary limits and funding-gap caps, and money only ever goes to the institution.</li>
+            <li><strong>Child safety (POPIA):</strong> under-18s stay hidden from sponsors until a guardian consents.</li>
+            <li><strong>Tested:</strong> 99 offline checks plus 38 live attack probes.</li>
+          </ul>
+          <ul class="chips" aria-label="Technologies">
+            <li>React 19</li><li>TypeScript</li><li>Tailwind CSS</li><li>Supabase</li>
+            <li>PostgreSQL</li><li>Twilio WhatsApp</li><li>Vercel</li>
+          </ul>
           <div class="links">
             <a class="btn primary small" href="https://thutovest.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
             <a class="btn ghost small" href="https://github.com/SamkiDev/thutovest" target="_blank" rel="noopener">Source code ↗</a>
           </div>
         </div>
 
-        <div class="featured-detail">
-          <figure class="arch" aria-labelledby="arch-cap">
-            <figcaption id="arch-cap" class="label">How it fits together</figcaption>
-            <div class="arch-row">
-              <span class="node">Browser<small>React app</small></span>
-              <span class="arrow" aria-hidden="true"></span>
-              <span class="node key">Edge Function<small>checks every action</small></span>
-              <span class="arrow" aria-hidden="true"></span>
-              <span class="node">Postgres<small>row-level security</small></span>
+        <div class="gallery">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="url">thutovest.vercel.app</span>
             </div>
-            <div class="arch-row">
-              <span class="node">Phone<small>any handset</small></span>
-              <span class="arrow" aria-hidden="true"></span>
-              <span class="node">Twilio<small>WhatsApp</small></span>
-              <span class="arrow" aria-hidden="true"></span>
-              <span class="node key">Edge Function<small>shared bot logic</small></span>
+            <div class="shot-wrap">
+              <img id="shot" class="shot"
+                   src="assets/thutovest-landing.webp"
+                   srcset="assets/thutovest-landing-sm.webp 800w, assets/thutovest-landing.webp 1600w"
+                   sizes="(min-width: 980px) 560px, 92vw"
+                   width="1600" height="1000"
+                   alt="ThutoVest home page: From I want to study to I can graduate, beside a demo student's pathway with a R92,400 funding gap">
             </div>
-            <p class="arch-note">The browser is never trusted. The server runs the same rules as the app before anything is saved.</p>
-          </figure>
-
-          <ul class="bullets">
-            <li><strong>Fair funding rules on the server.</strong> Bursary limits and funding-gap caps are enforced there, and money only ever goes to the institution.</li>
-            <li><strong>Child safety under POPIA.</strong> Under-18s stay hidden from sponsors until a guardian consents and co-signs.</li>
-            <li><strong>Explainable assistant.</strong> Deadline and cash-flow forecasts, sponsor matching and scam detection, each with a "Why?" panel.</li>
-            <li><strong>Tested hard.</strong> 99 offline checks, plus 38 attack probes against the live backend.</li>
-          </ul>
-
-          <ul class="chips" aria-label="Technologies">
-            <li>React 19</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li>
-            <li>Supabase</li><li>PostgreSQL</li><li>Twilio</li><li>Vercel</li>
-          </ul>
+          </div>
+          <div class="shot-tabs" role="tablist" aria-label="ThutoVest screens">
+            <button type="button" role="tab" aria-selected="true" aria-controls="shot"
+                    data-src="assets/thutovest-landing" data-alt="ThutoVest home page: From I want to study to I can graduate, beside a demo student's pathway with a R92,400 funding gap">Home</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="shot" tabindex="-1"
+                    data-src="assets/thutovest-student" data-alt="Student dashboard for the demo student Tatenda: journey progress, next best action and a R92,400 funding gap">Student</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="shot" tabindex="-1"
+                    data-src="assets/thutovest-sponsor" data-alt="Sponsor overview for the demo sponsor Ridgeline Technologies: committed funds, payments to institutions and the candidate pipeline">Sponsor</button>
+          </div>
+          <p class="shot-note">Screens from the demo. Every student and sponsor shown is fictional.</p>
         </div>
       </article>
 
       <div class="project-grid">
-        <article class="project">
-          <p class="label accent">In development · Collaborator</p>
+        <article class="project with-shot">
+          <div class="thumb">
+            <img src="assets/thengesa.webp"
+                 srcset="assets/thengesa-sm.webp 640w, assets/thengesa.webp 1200w"
+                 sizes="(min-width: 760px) 480px, 92vw"
+                 width="1200" height="750" loading="lazy"
+                 alt="Three phone screens from the Thengesa demo shop: a restock plan, today's sales and the stock list">
+            <span class="badge"><span class="pulse" aria-hidden="true"></span>In development</span>
+          </div>
+          <p class="tag">Collaborator · 2026</p>
           <h3>Thengesa</h3>
-          <p>A project I'm building as a collaborator. It's in development, and details are coming soon.</p>
-          <ul class="chips"><li class="chip-status">In development</li></ul>
+          <p>
+            A phone-first business assistant for spaza shops and small township retailers. It turns
+            recorded sales, expenses and stock purchases into plain-language decisions: what to
+            restock, how much cash that needs, and which products are losing money.
+          </p>
+          <ul class="chips"><li>Mobile-first</li><li>Insights</li><li>Data privacy</li></ul>
         </article>
 
-        <article class="project">
-          <p class="label accent">Personal · This site</p>
+        <article class="project with-shot">
+          <div class="thumb thumb-code" aria-hidden="true">
+            <span class="thumb-tag">&lt;/&gt;</span>
+            <span class="thumb-line w70"></span>
+            <span class="thumb-line w45"></span>
+            <span class="thumb-line w85"></span>
+            <span class="thumb-line w55"></span>
+          </div>
+          <p class="tag">Personal · This site</p>
           <h3>Developer portfolio</h3>
-          <p>Hand-written HTML, CSS and a little JavaScript, with no framework and no build step. It's responsive and accessible, with light and dark themes, and it's hosted on GitHub Pages.</p>
+          <p>
+            The site you're on. Hand-written HTML, CSS and a little JavaScript with no framework
+            and no build step. It's responsive, accessible, has a light and dark theme, and is hosted on
+            GitHub Pages.
+          </p>
           <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
           <div class="links">
-            <a class="text-link" href="https://github.com/Shoki-RSM/portfolio" target="_blank" rel="noopener">View source ↗</a>
+            <a class="text-link" href="https://github.com/Shoki-RSM/portfolio" target="_blank" rel="noopener">Source ↗</a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- TOOLKIT -->
-    <section id="toolkit" class="section wrap">
-      <div class="section-head">
-        <p class="label">Toolkit</p>
-        <h2>What I work with</h2>
-      </div>
-      <div class="toolkit">
-        <div class="tool-row">
+    <!-- SKILLS -->
+    <section id="skills" class="section wrap">
+      <h2 class="section-title"><span>03</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
           <h3>Languages</h3>
           <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML</li><li>CSS</li></ul>
         </div>
-        <div class="tool-row">
+        <div class="skill-card">
           <h3>Frameworks &amp; platforms</h3>
           <ul class="chips"><li>React</li><li>Tailwind CSS</li><li>Vite</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li></ul>
         </div>
-        <div class="tool-row">
-          <h3>Practice</h3>
+        <div class="skill-card">
+          <h3>Tools &amp; practice</h3>
           <ul class="chips"><li>Git &amp; GitHub</li><li>Automated testing</li><li>REST APIs</li><li>Row-level security</li><li>Responsive design</li></ul>
         </div>
-        <div class="tool-row">
+        <div class="skill-card">
           <h3>Foundations</h3>
           <ul class="chips"><li>Data structures</li><li>Algorithms</li><li>Databases</li><li>Discrete maths</li><li>Problem solving</li></ul>
         </div>
@@ -224,59 +253,42 @@
 
     <!-- EDUCATION -->
     <section id="education" class="section wrap">
-      <div class="section-head">
-        <p class="label">Education &amp; experience</p>
-        <h2>Where I've been learning</h2>
-      </div>
+      <h2 class="section-title"><span>04</span> Education &amp; experience</h2>
       <ol class="timeline">
         <li>
-          <p class="when">2026</p>
-          <div>
-            <h3>FNB App of the Year Hackathon <span class="muted">· Team Thuto</span></h3>
-            <p>Designed and built ThutoVest with two teammates for the <em>Access to Higher Education</em> challenge. It's a working, deployed full-stack app with a WhatsApp bot.</p>
-          </div>
+          <p class="when">2025 – present</p>
+          <h3>BSc Computing <span class="muted">· University of South Africa (UNISA)</span></h3>
+          <p>Currently in second year. Coursework covers programming, data structures and algorithms, databases, computer systems and the mathematics of computing.</p>
         </li>
         <li>
-          <p class="when">2025 – now</p>
-          <div>
-            <h3>BSc Computing <span class="muted">· University of South Africa</span></h3>
-            <p>Now in second year. Coursework covers programming, data structures and algorithms, databases, computer systems and the mathematics of computing.</p>
-          </div>
+          <p class="when">2026</p>
+          <h3>FNB App of the Year Hackathon <span class="muted">· Team Thuto</span></h3>
+          <p>Designed and built ThutoVest with two teammates for the <em>Access to Higher Education</em> challenge. It's a working, deployed full-stack app with a WhatsApp bot.</p>
         </li>
       </ol>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section wrap">
-      <div class="contact">
-        <div class="contact-text">
-          <p class="label">Contact</p>
-          <h2>Let's build something</h2>
-          <p>I'm open to internships, vacation work and student projects, and always happy to talk about code.</p>
-        </div>
-        <ul class="contact-list">
-          <li>
-            <span class="label">GitHub</span>
-            <a href="https://github.com/Shoki-RSM" target="_blank" rel="noopener">github.com/Shoki-RSM ↗</a>
-          </li>
-          <!-- Email and LinkedIn go here, for example:
-          <li>
-            <span class="label">Email</span>
-            <span class="copy-row"><a href="mailto:name@example.com">name@example.com</a>
-            <button class="copy" type="button" data-copy="name@example.com">Copy</button></span>
-          </li>
-          <li>
-            <span class="label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile ↗</a>
-          </li>
+      <div class="contact-card">
+        <h2>Let's work together</h2>
+        <p>
+          I'm open to internships, vacation work, student projects and a good conversation about code.
+          The best way to reach me is through GitHub.
+        </p>
+        <div class="cta center">
+          <a class="btn primary" href="https://github.com/Shoki-RSM" target="_blank" rel="noopener">Find me on GitHub</a>
+          <!-- Add more contact links here, for example:
+          <a class="btn ghost" href="mailto:your.email@example.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
           -->
-        </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer wrap">
-    <p>© <span id="year">2026</span> Shoki · Hand-built and hosted on GitHub Pages</p>
+    <p>© <span id="year">2026</span> Shoki. Built by hand and hosted on GitHub Pages.</p>
     <a href="#top" class="text-link">Back to top ↑</a>
   </footer>
 

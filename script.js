@@ -35,23 +35,54 @@
     });
   }
 
-  // ----- Copy buttons (e.g. the email address) -----
-  document.addEventListener('click', function (e) {
-    var btn = e.target.closest('.copy');
-    if (!btn) return;
-    var text = btn.getAttribute('data-copy');
-    function done(label) {
-      btn.textContent = label;
-      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { done('Select to copy'); });
-    } else {
-      done('Select to copy');
-    }
-  });
-
   // ----- Footer year -----
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+
+  // ----- ThutoVest screenshot tabs -----
+  var shot = document.getElementById('shot');
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.shot-tabs [role="tab"]'));
+  function selectTab(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    if (focus) tab.focus();
+    var base = tab.getAttribute('data-src');
+    shot.classList.add('swap');
+    var img = new Image();
+    img.onload = img.onerror = function () {
+      shot.src = base + '.webp';
+      shot.srcset = base + '-sm.webp 800w, ' + base + '.webp 1600w';
+      shot.alt = tab.getAttribute('data-alt');
+      shot.classList.remove('swap');
+    };
+    img.src = base + '.webp';
+  }
+  if (shot && tabs.length) {
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener('click', function () { selectTab(tab, false); });
+      tab.addEventListener('keydown', function (e) {
+        var next = null;
+        if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (next) { e.preventDefault(); selectTab(next, true); }
+      });
+    });
+  }
+
+  // ----- Reveal sections as they scroll into view -----
+  if ('IntersectionObserver' in window) {
+    var items = document.querySelectorAll('.section-title, .project, .skill-card, .timeline li, .about-grid, .contact-card');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  }
 })();

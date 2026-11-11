@@ -12,6 +12,7 @@ Plain HTML, CSS and JavaScript with no framework and no build step.
 | `styles.css` | Layout, light and dark theme, responsive styles |
 | `script.js` | Theme toggle, mobile menu, footer year, scroll reveal |
 | `favicon.svg` | Site icon |
+| `assets/` | Project screenshots (`.webp`, with `-sm` versions for phones) |
 
 ## Run it locally
 
@@ -35,6 +36,6 @@ Tip: if the repo is named `Shoki-RSM.github.io`, the site is served at `https://
 Everything lives in `index.html`:
 
 - **Name and intro:** the hero section at the top of `<main>`
-- **New project:** copy an `<article class="project">` block in the Projects section
+- **New project:** copy an `<article class="project with-shot">` block in the Projects section and add its screenshot to `assets/`
 - **Contact links:** uncomment the email and LinkedIn buttons in the Contact section and fill them in
 - **Colours:** change the `--accent` and `--accent-2` tokens at the top of `styles.css`
